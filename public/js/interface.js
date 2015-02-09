@@ -1,29 +1,44 @@
+function moveLeft() {
+	  player.moveLeft();
+    if (player.able === true)
+      position.x--;
+      if (position.x < 0)
+        position.x = 0;      
+}
 
-  var grid = movableGrid(10,10,function(row,col){
-      console.log("You moved up:",col);
-      console.log("You moved left:",row);
-      console.log("You moved right:",row);
-      console.log("You moved down",col);
+function moveUp() {
+	player.moveUp()
+    if (player.able === true)
+      position.y--;
+      if (position.y < 0)
+        position.y = 0;
+}
 
-   });
+function moveRight() {
+	player.moveRight()
+    if (player.able === true)
+      position.x++;
+      if (position.x >= mazeGame[0].length)
+        position.x = mazeGame[0].length - 1;      
+}
 
-document.body.appendChild(grid); 
+function moveDown() {
+	player.moveDown()
+	if (player.able === true)
+      position.y++;
+      if (position.y >= mazeGame.length)
+        position.y = mazeGame.length - 1;
+}
 
-function movableGrid( rows, cols, callback ){
-    var i=0;
-    var grid = document.createElement('table');
-    grid.className = 'grid';
-    for (var r=0;r<rows;++r){
-        var tr = grid.appendChild(document.createElement('tr'));
-        for (var c=0;c<cols;++c){
-            var cell = tr.appendChild(document.createElement('td'));
-            cell.innerHTML = ++i;
-            cell.addEventListener('click',(function(row,col){
-                return function(){
-                    callback(row,col);
-                }
-            })(cell,r,c,i),false);
-        }
-    }
-    return grid;
-} 
+function highlightCell() {
+    $('.row1').removeClass('selected');
+    mazeGame[position.y][position.x].addClass('selected');
+    console.log(player.place)
+}
+
+
+function win(){
+	if (player.win == true){
+	  alert("You Win")
+	}
+}
