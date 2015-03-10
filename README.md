@@ -56,7 +56,6 @@ node server.js
 
 Visit http://localhost:3001/
 
-Me
-----
-I am [Hannah] from the December 2014 cohort of Makers Academy, London!
-[Hannah]:https://github.com/HannahCarney
+<h2> Contributors </h2>
+
+[Hannah Carney] (https://github.com/HannahCarney)
