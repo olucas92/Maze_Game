@@ -34,12 +34,6 @@ Requirements
 - [x] Make a maze in which a player can get to the end and win
 - [ ] Bad guys who kill you
 
-How to clone this repo
-----
-```sh
-git clone https://github.com/HannahCarney/MazeGame.git
-```
-
 How to run tests
 ----
 ```sh
