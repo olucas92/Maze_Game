@@ -2,8 +2,9 @@ function moveLeft() {
 	  player.moveLeft();
     if (player.able === true)
       position.x--;
-      if (position.x < 0)
-        position.x = 0;      
+      if (position.x < 0) {
+        position.x = 0;
+      }
 }
 
 function moveUp() {
@@ -36,9 +37,9 @@ function highlightCell() {
     console.log(player.place)
 }
 
+function key(){
+  if (player.keyHave == true) {
+    $('.row1').removeClass('key');
 
-function win(){
-	if (player.win == true){
-	  alert("You Win")
-	}
+  }
 }
